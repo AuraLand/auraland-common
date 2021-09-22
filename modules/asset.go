@@ -39,3 +39,41 @@ func (asset *Asset) ToString() string {
 func (asset *Asset) AssignId(id string) {
 	asset.Id = id
 }
+
+/*
+	Description: Update a space according to the input info
+	Param: info: space info for the space
+	return:
+*/
+func (asset *Asset) Update(info map[string]interface{}) {
+	if value, ok := info["url"]; ok {
+		asset.Url = value.(string)
+	}
+	if value, ok := info["name"]; ok {
+		asset.Name = value.(string)
+	}
+	if value, ok := info["thumbnail_url"]; ok {
+		asset.ThumbnailUrl = value.(string)
+	}
+	if value, ok := info["type"]; ok {
+		asset.Type = value.(string)
+	}
+	if value, ok := info["category"]; ok {
+		asset.Category = value.(string)
+	}
+	if value, ok := info["metadata"]; ok {
+		asset.Metadata = value.(string)
+	}
+	if value, ok := info["created_at"]; ok {
+		asset.CreatedAt = value.(int64)
+	}
+	if value, ok := info["updated_at"]; ok {
+		asset.UpdatedAt = value.(int64)
+	}
+	if value, ok := info["version"]; ok {
+		asset.Version = value.(int32)
+	}
+	if value, ok := info["thumbnail_version"]; ok {
+		asset.ThumbnailVersion = value.(int32)
+	}
+}
