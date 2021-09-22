@@ -6,7 +6,9 @@ const (
 	*/
 	RPCAssetList    = "assetList"
 	RPCAssetGetByID = "assetGetById"
-
+	RPCAssetCreate  = "assetCreate"
+	RPCAssetUpdate  = "assetUpdate"
+	RPCAssetDrop    = "assetDrop"
 	/*
 		Avatar's RPC API
 	*/

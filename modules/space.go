@@ -6,7 +6,7 @@ import (
 )
 
 type Space struct {
-	Id               string   `json:"space_id"`
+	Id               string   `json:"id"`
 	CreatorId        string   `json:"creator_id,omitempty"`
 	DisplayName      string   `json:"display_name"`
 	Description      string   `json:"description,omitempty"`
@@ -220,4 +220,3 @@ func (space *Space) RemoveAvatarID(ids []string) {
 		}
 	}
 }
-
