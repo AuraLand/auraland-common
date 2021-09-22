@@ -32,3 +32,10 @@ func (asset *Asset) ToByte() []byte {
 func (asset *Asset) ToString() string {
 	return string(asset.ToByte())
 }
+
+/*
+	assign id to asset
+*/
+func (asset *Asset) AssignId(id string) {
+	asset.Id = id
+}
